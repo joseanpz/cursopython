@@ -49,18 +49,19 @@ print(my_method('jose'))
 
 # clases
 class A:
+    
     def __init__(self, name=None, last_name=None):
         self.name = name
         self.last_name = last_name
 
     def get_fullname(self):
-        return f'{self.name} {self.last_name}'
+        return f'Mi nombre es {self.name} {self.last_name}'
 
 
 # herencia
 class B(A):
     def get_fullname(self):
-        return f'{self.last_name}, {self.name}'
+        return f'Este es otro metodo {self.last_name}, {self.name}'
 
 
 objetoa = A(name='Jose', last_name='Espinoza')

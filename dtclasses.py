@@ -26,7 +26,7 @@ class Person:
         return NotImplemented    
 
     
-class PersonOrdered(A):
+class PersonOrdered(Person):
     
     def __lt__(self, other):
         if other.__class__ is self.__class__:
@@ -51,10 +51,15 @@ class PersonOrdered(A):
 
 @dataclass(init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False)
 class PersonDC:
-    name: str
-    gender: str
-    age: int
+    name: str = field(order=False)
+    gender: str = field(order=False)
+    age: int = field(eq=False)
 
+    def __post_init__(self):
+        pass
+
+
+print('finish!')
 
 
 
