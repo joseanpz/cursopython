@@ -8,7 +8,7 @@ class Person:
         self.gender = gender
         self.age = age
 
-object
+
 class Person:
     
     def __init__(self, name:str, gender:str, age:int):
