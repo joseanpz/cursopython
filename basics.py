@@ -29,6 +29,18 @@ conjuntoa = set(lista)
 conjuntob = set([1,3,5,4])
 print(conjuntoa.union(conjuntob))
 
+# listas exaustivas
+newarr = [x**2 for x in lista]
+
+# maps
+objmap = map(lambda x: x**2, lista)
+
+for cuadr in objmap:
+    print(cuadr)
+
+# filters
+objfilter = filter(lambda x: x % 2 == 0, lista)
+
 # metodos
 def my_method(name):
     print(f'hola {name}')
